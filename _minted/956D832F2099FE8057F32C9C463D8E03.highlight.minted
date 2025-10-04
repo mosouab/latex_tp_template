@@ -1,0 +1,22 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+ch}{\PYGZsh{}!/bin/bash}
+\PYG{c+c1}{\PYGZsh{} Script de traitement automatique des données}
+
+process\PYGZus{}data\PYG{o}{()}\PYG{+w}{ }\PYG{o}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nv}{input\PYGZus{}file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}1}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{+w}{    }\PYG{n+nv}{output\PYGZus{}dir}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}2}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{+w}{    }\PYG{n+nb}{echo}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Traitement de }\PYG{n+nv}{\PYGZdl{}input\PYGZus{}file}\PYG{l+s+s2}{...\PYGZdq{}}
+
+\PYG{+w}{    }\PYG{c+c1}{\PYGZsh{} Création du répertoire de sortie}
+\PYG{+w}{    }mkdir\PYG{+w}{ }\PYGZhy{}p\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}output\PYGZus{}dir}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{+w}{    }\PYG{c+c1}{\PYGZsh{} Traitement avec Python}
+\PYG{+w}{    }python3\PYG{+w}{ }analyse\PYGZus{}spectrale.py\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}input\PYGZus{}file}\PYG{l+s+s2}{\PYGZdq{}}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}output\PYGZus{}dir}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{+w}{    }\PYG{n+nb}{echo}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Traitement terminé. Résultats dans }\PYG{n+nv}{\PYGZdl{}output\PYGZus{}dir}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Utilisation}
+process\PYGZus{}data\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}data/signal.csv\PYGZdq{}}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}results/\PYGZdq{}}
+\end{MintedVerbatim}

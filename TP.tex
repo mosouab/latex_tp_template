@@ -66,7 +66,7 @@ Cette section présente le code utilisé pour l'analyse des données et les calc
 
 Le code suivant montre un exemple d'analyse spectrale d'un signal sinusoïdal discrétisé :
 
-\begin{lstlisting}[language=Python, caption=Analyse spectrale d'un signal sinusoïdal]
+\begin{minted}[linenos, frame=lines, framesep=2mm]{python}
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
@@ -120,13 +120,13 @@ c_0 = 343      # Vitesse du son (m/s)
 Z_c = rho_0 * c_0
 
 print(f"Impédance caractéristique de l'air : {Z_c:.1f} Pa.s/m³")
-\end{lstlisting}
+\end{minted}
 
 \subsection{Fonctions utilitaires}
 
 Voici quelques fonctions utiles pour les calculs d'acoustique :
 
-\begin{lstlisting}[language=Python, caption=Fonctions pour les calculs acoustiques]
+\begin{minted}[linenos, frame=lines, framesep=2mm]{python}
 def calculate_wavelength(frequency, sound_speed=343):
     """
     Calcule la longueur d'onde d'un signal acoustique.
@@ -162,7 +162,34 @@ db_level = pressure_to_db(pressure)
 print(f"Fréquence: {freq} Hz")
 print(f"Longueur d'onde: {wavelength:.3f} m")
 print(f"Niveau sonore: {db_level:.1f} dB SPL")
-\end{lstlisting}
+\end{minted}
+
+\subsection{Script de traitement des données}
+
+Exemple d'un script bash pour automatiser le traitement :
+
+\begin{minted}[linenos, frame=lines, framesep=2mm]{bash}
+#!/bin/bash
+# Script de traitement automatique des données
+
+process_data() {
+    input_file="$1"
+    output_dir="$2"
+    
+    echo "Traitement de $input_file..."
+    
+    # Création du répertoire de sortie
+    mkdir -p "$output_dir"
+    
+    # Traitement avec Python
+    python3 analyse_spectrale.py "$input_file" "$output_dir"
+    
+    echo "Traitement terminé. Résultats dans $output_dir"
+}
+
+# Utilisation
+process_data "data/signal.csv" "results/"
+\end{minted}
 
 
 \section*{Conclusion}
