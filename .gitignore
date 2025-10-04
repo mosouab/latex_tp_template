@@ -21,6 +21,10 @@
 *.snm
 *.vrb
 
+# Minted (code highlighting) cache
+_minted-*/
+*.pyg
+
 # LaTeX build files
 *.pdf
 !template.pdf
